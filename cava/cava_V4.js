@@ -2,13 +2,11 @@ exports.init = function () {
     info('[ CaVa ] is initializing ...');
 }
 
-exports.action = function(data, callback, config, SARAH){
-
-  var config = config.modules.cava;
-  var name = config.votre_prenom;
-  // Si on utilise Scribe, décommenter la ligne juste en dessous
+exports.action = function(data, callback){
+  // Si on utilise Scribe
   //SARAH.context.scribe.activePlugin('CaVa');
-
+  var config = Config.modules.cava;
+  var name = config.votre_prenom;
   var reponses = [
     "Ca va bien, " + name + ", et vous ?",
     "Comme d'habitude, et vous ?",
